@@ -1,7 +1,6 @@
 import 'package:deepcaretask/domain/random_number.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-
 void main() {
   group('Random Number', () {
     test('random number is between 1 and 100', () {
