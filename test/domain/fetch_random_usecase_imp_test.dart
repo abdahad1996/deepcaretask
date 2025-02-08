@@ -1,7 +1,7 @@
 import 'package:deepcaretask/data/fetch_random_usecase_imp.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:deepcaretask/domain/random_number.dart';
-import 'helpers/stub_random_number_repository.dart';
+import '../data/helpers/stub_random_number_repository.dart';
 
 
 void main() {
