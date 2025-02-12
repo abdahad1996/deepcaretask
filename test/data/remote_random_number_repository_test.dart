@@ -1,4 +1,4 @@
-import 'package:deepcaretask/data/remote_random_repository.dart';
+import 'package:deepcaretask/data/http/random_repository_imp.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import 'helpers/stub_api_client.dart';
@@ -10,34 +10,27 @@ void main() {
 
   test('should return RandomNumber when APIClient returns valid JSON',
       () async {
-    // Arrange
     final apiClientStub = APIClientStub(response: [42]);
-    final repository = RemoteRandomNumberRepository(apiClientStub, testUrl);
+    final repository = RandomNumberRepositoryImp(apiClientStub, testUrl);
 
-    // Act
     final result = await repository.loadNumber();
 
-    // Assert
-    expect(result.value, 42); // Check the RandomNumber value
+    expect(result.value, 42); 
   });
 
   test('should throw Exception when APIClient throws an error', () async {
-    // Arrange
     final apiClientStub = APIClientStub(response: [42]);
-    final repository = RemoteRandomNumberRepository(apiClientStub, testUrl);
+    final repository = RandomNumberRepositoryImp(apiClientStub, testUrl);
     apiClientStub.error = Exception('API Error');
 
-    // Act & Assert
     expect(() => repository.loadNumber(), throwsA(isA<Exception>()));
   });
 
   test('should throw Exception when APIClient returns invalid JSON', () async {
-    // Arrange
     final apiClientStub = APIClientStub(response: [42]);
-    final repository = RemoteRandomNumberRepository(apiClientStub, testUrl);
+    final repository = RandomNumberRepositoryImp(apiClientStub, testUrl);
     apiClientStub.error = Exception('invaliddata');
 
-    // Act & Assert
     expect(() => repository.loadNumber(), throwsA(isA<Exception>()));
   });
 }

@@ -1,13 +1,14 @@
+
 import 'package:deepcaretask/data/http/http_client.dart';
-import 'package:deepcaretask/data/remote_random_number.dart';
+import 'package:deepcaretask/data/http/remote_random_number.dart';
 import 'package:deepcaretask/domain/random_number.dart';
 import 'package:deepcaretask/domain/random_number_repository.dart';
 
-class RemoteRandomNumberRepository implements RandomNumberRepository {
+class RandomNumberRepositoryImp implements RandomNumberRepository {
   final ApiClient _apiClient;
   final String url;
 
-  RemoteRandomNumberRepository(this._apiClient, this.url);
+  RandomNumberRepositoryImp(this._apiClient, this.url);
 
   @override
   Future<RandomNumber> loadNumber() async {
