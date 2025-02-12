@@ -1,7 +1,7 @@
 import 'package:deepcaretask/domain/fetch_random_usecase_imp.dart';
 import 'package:deepcaretask/infra/api_client_adapter.dart';
 import 'package:deepcaretask/presentation/random_number_bloc.dart';
-import 'package:deepcaretask/ui/clock_screen.dart';
+import 'package:deepcaretask/ui/screen/clock_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:http/http.dart' as http;

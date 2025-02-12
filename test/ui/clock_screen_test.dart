@@ -1,8 +1,8 @@
 import 'package:deepcaretask/presentation/random_number_bloc.dart';
 import 'package:deepcaretask/presentation/random_number_event.dart';
 import 'package:deepcaretask/presentation/random_number_state.dart';
-import 'package:deepcaretask/ui/clock_screen.dart';
-import 'package:deepcaretask/ui/prime_notification_screen.dart';
+import 'package:deepcaretask/ui/screen/clock_screen.dart';
+import 'package:deepcaretask/ui/screen/prime_notification_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
